@@ -1,4 +1,4 @@
-# VPC
+# VPC creation
 resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
   tags = { Name = "${var.project_name}-${var.environment}-vpc" }
 }
 
-# Internet Gateway
+# Internet Gateway creation
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
   tags   = { Name = "${var.project_name}-${var.environment}-igw" }

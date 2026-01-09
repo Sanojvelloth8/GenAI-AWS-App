@@ -1,4 +1,4 @@
-# DynamoDB Table for Chat History
+# DynamoDB Table for Chat Histories
 resource "aws_dynamodb_table" "chat" {
   name         = "${var.project_name}-${var.environment}-chat-history"
   billing_mode = "PAY_PER_REQUEST"
